@@ -35,6 +35,7 @@ elif opcion == 2:
     print('\n Conversor de palabra a numero. \n')
     
     opcion_dos = input('\n Ingrese la palabra a convertir y presiona Enter: \n')
+    opcion_dos = opcion_dos.lower()
     
     if opcion_dos == 'uno':
         print('El numero es "1"')
