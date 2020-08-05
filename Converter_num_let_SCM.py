@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 print("=================================")
 print("Convertidor de numeros a letras!!")
 print("=================================")
