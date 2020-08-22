@@ -30,11 +30,16 @@ print('Presiona 4 para calcular el Error Porcentual.')
 opcion = int(input('\n Indique la opcion deseada: '))
 
 if opcion == 1:
-       valor_medio = opcion_uno + opcion_dos + opcion_tres + opcion_cuatro #Ver Formula valor medio (esta es un ejemplo)!
+       valor_medio = (opcion_uno + opcion_dos + opcion_tres + opcion_cuatro)/4 #Formula valor medio 
        print('El valor medio de sus mediciones es: ', valor_medio)
        
 elif opcion == 2:
-    desv_stnd = (opcion_uno + opcion_dos + opcion_tres + opcion_cuatro)*opcion_uno
+
+    valor_medio = (opcion_uno + opcion_dos + opcion_tres + opcion_cuatro)/4
+    
+    import math
+    desv_stnd = math.sqrt(((opcion_uno - valor_medio)**2 + (opcion_dos - valor_medio)**2 + (opcion_tres - valor_medio)**2 + (opcion_cuatro - valor_medio)**2 )/4)
+                    #Aca ojo
     print('La Desviacion Estandar de sus mediciones es: ', desv_stnd)
 elif opcion == 3:
     error_rel = (opcion_uno + opcion_dos + opcion_tres + opcion_cuatro)*opcion_dos
